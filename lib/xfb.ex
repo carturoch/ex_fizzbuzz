@@ -3,6 +3,8 @@ defmodule Xfb do
   Documentation for Xfb.
   """
 
+  defguard is_divisible_by(n, d) when rem(n, d) == 0
+
   @doc """
   Gets the FB value at the given numbers
 
@@ -33,18 +35,10 @@ defmodule Xfb do
       "fizzbuzz"
 
   """
-  def at(n) do
-    case {rem(n, 3), rem(n, 5)} do
-      {0, 0} ->
-        "fizzbuzz"
-      {0, _} ->
-        "fizz"
-      {_, 0} ->
-        "buzz"
-      _ ->
-        "#{n}" 
-    end
-  end
+  def at(n) when is_divisible_by(n, 15), do: "fizzbuzz"
+  def at(n) when is_divisible_by(n, 3), do: "fizz"
+  def at(n) when is_divisible_by(n, 5), do: "buzz"
+  def at(n), do: "#{n}"
 
   @doc """
   Gets the sequence til the given number inclusive
