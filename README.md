@@ -1,21 +1,9 @@
 # Xfb
 
-**TODO: Add description**
+**Elixir solution for the common interview's problem: FizzBuzz**
 
-## Installation
+## Why?
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `xfb` to your list of dependencies in `mix.exs`:
+It's the `Hello World!` of interviews. Illustrates the usage of basic constructs and techniques applied to a simple problem.
 
-```elixir
-def deps do
-  [
-    {:xfb, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/xfb](https://hexdocs.pm/xfb).
-
+Also a good problem to illustrate how *property testing* can be used to support good old unit testing.
